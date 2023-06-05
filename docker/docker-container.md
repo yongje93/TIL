@@ -79,6 +79,18 @@ docker container ls
 - PORTS : 컨테이너에 할당된 포트 번호 (호스트 포트 번호/컨테이너 포트 번호) 형식
 - NAMES : 컨테이너 이름
 
+- - -
 
+### Docker 네트워크
 
+도커 네트워크 생성
 
+```bash
+docker network create [네트워크 이름]
+```
+
+도커 네트워크 삭제
+
+```bash
+docker network rm [네트워크 이름]
+```
