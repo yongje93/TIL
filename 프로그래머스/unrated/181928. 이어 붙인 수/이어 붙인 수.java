@@ -4,14 +4,14 @@ class Solution {
         String odd = "";
         String even = "";
         
-        for (int i = 0; i < num_list.length; i++) {
-            if (num_list[i] % 2 == 0) {
-                even = even + "" + num_list[i];
+        for (int num : num_list) {
+            if (num % 2 == 0) {
+                even += "" + num;
             } else {
-                odd = odd + "" + num_list[i];
+                odd += "" + num;
             }
         }
-        
+
         answer = Integer.parseInt(even) + Integer.parseInt(odd);
         
         return answer;
