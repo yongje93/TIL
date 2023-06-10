@@ -1,19 +1,20 @@
 class Solution {
     public int solution(int n, String control) {
-        for (int i = 0; i < control.length(); i++) {
-            switch(control.charAt(i)) {
-                case 'w': n += 1;
+        int answer = n;
+        for (char c : control.toCharArray()) {
+            switch(c) {
+                case 'w': answer += 1;
                     break;
-                case 's': n -= 1;
+                case 's': answer -= 1;
                     break;
-                case 'd': n += 10;
+                case 'd': answer += 10;
                     break;
-                case 'a': n -= 10;
+                case 'a': answer -= 10;
                     break;
                 default: 
                     break;
             }
         }
-        return n;
+        return answer;
     }
 }
