@@ -3,8 +3,7 @@ class Solution {
         int[] answer = new int[numbers.length];
         int i = 0;
         for (int num : numbers) {
-            answer[i] = num*2;
-            i++;
+            answer[i++] = num*2;
         }
         return answer;
     }
