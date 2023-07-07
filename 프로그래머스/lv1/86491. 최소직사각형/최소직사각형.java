@@ -1,22 +1,10 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 class Solution {
     public int solution(int[][] sizes) {
-        List<Integer> width = new ArrayList<>();
-        List<Integer> height = new ArrayList<>();
-
-        for (int[] size : sizes) {
-            if (size[0] > size[1]) {
-                width.add(size[1]);
-                height.add(size[0]);
-            } else {
-                width.add(size[0]);
-                height.add(size[1]);
-            }
+        int length = 0, height = 0;
+        for (int[] card : sizes) {
+            length = Math.max(length, Math.max(card[0], card[1]));
+            height = Math.max(height, Math.min(card[0], card[1]));
         }
-
-        return Collections.max(width) * Collections.max(height);
+        return length * height;
     }
 }
