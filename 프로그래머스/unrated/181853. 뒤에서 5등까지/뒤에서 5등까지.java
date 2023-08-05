@@ -2,7 +2,9 @@ import java.util.Arrays;
 
 class Solution {
     public int[] solution(int[] num_list) {
-        Arrays.sort(num_list);
-        return Arrays.copyOf(num_list, 5);
+        return Arrays.stream(num_list)
+            .sorted()
+            .limit(5)
+            .toArray();
     }
 }
